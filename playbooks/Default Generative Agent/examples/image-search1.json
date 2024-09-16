@@ -1,0 +1,31 @@
+{
+  "name": "9c8f58c8-7869-4faa-9536-e23d3dac4d1c",
+  "actions": [ {
+    "userUtterance": {
+      "text": "What is in the image?"
+    }
+  }, {
+    "toolUse": {
+      "tool": "projects/hello-world-418507/locations/us-central1/agents/bf9e57c5-4518-4255-913c-e9188905d87b/tools/e39b01f0-53f9-4c99-8102-6a0fd8f94534",
+      "action": "question_about_an_image",
+      "inputActionParameters": {
+        "image_path": "path/image.png",
+        "text": "What is in the image"
+      },
+      "outputActionParameters": {
+        "200": "This is a car"
+      }
+    }
+  }, {
+    "agentUtterance": {
+      "text": "The image contain a car"
+    }
+  } ],
+  "playbookOutput": {
+    "executionSummary": "Described the image."
+  },
+  "displayName": "image-search1",
+  "retrievalStrategy": "STATIC",
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

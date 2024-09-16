@@ -1,0 +1,6 @@
+{
+  "promptTexts": [ {
+    "text": "I want you to classify the intent of the customer given the input below:\n\u003cinformation\u003e\n$metadata\n\u003c/information\u003e\n\n\u003cinput\u003e\n$last-user-utterance\n\u003c/input\u003e",
+    "languageCode": "en"
+  } ]
+}

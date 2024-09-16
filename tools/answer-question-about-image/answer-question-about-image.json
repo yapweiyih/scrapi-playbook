@@ -1,0 +1,9 @@
+{
+  "name": "e39b01f0-53f9-4c99-8102-6a0fd8f94534",
+  "displayName": "answer-question-about-image",
+  "description": "Answer question about an image.",
+  "openApiSpec": {
+  
+  },
+  "toolType": "CUSTOMIZED_TOOL"
+}

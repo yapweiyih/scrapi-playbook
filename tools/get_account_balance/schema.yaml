@@ -1,0 +1,183 @@
+openapi: 3.1.0
+info:
+  title: My App
+  version: 0.1.0
+servers:
+  - url: https://dialogflow-cloudrun-bmvzxb62sa-uc.a.run.app
+    description: Server name
+paths:
+  /:
+    get:
+      summary: Root
+      operationId: root__get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HealthCheckResponse'
+  /get_balance/:
+    post:
+      summary: Get Balance
+      operationId: get_balance_get_balance__post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GetBalanceRequest'
+        required: true
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccountBalanceResponse'
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /update_balance/:
+    post:
+      summary: Update Balance
+      operationId: update_balance_update_balance__post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateBalanceRequest'
+        required: true
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccountBalanceResponse'
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /get_balance_datastore/:
+    post:
+      summary: Get Balance Datastore
+      operationId: get_balance_datastore_get_balance_datastore__post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GetBalanceRequest'
+        required: true
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccountBalanceResponse'
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /update_balance_datastore/:
+    post:
+      summary: Update Balance Datastore
+      operationId: update_balance_datastore_update_balance_datastore__post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateBalanceRequest'
+        required: true
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccountBalanceResponse'
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+components:
+  schemas:
+    AccountBalanceResponse:
+      properties:
+        balance:
+          type: number
+          title: Balance
+      type: object
+      required:
+      - balance
+      title: AccountBalanceResponse
+    GetBalanceRequest:
+      properties:
+        account_id:
+          type: string
+          title: Account Id
+      type: object
+      required:
+      - account_id
+      title: GetBalanceRequest
+    HTTPValidationError:
+      properties:
+        detail:
+          items:
+            $ref: '#/components/schemas/ValidationError'
+          type: array
+          title: Detail
+      type: object
+      title: HTTPValidationError
+    HealthCheckResponse:
+      properties:
+        message:
+          type: string
+          title: Message
+      type: object
+      required:
+      - message
+      title: HealthCheckResponse
+    UpdateBalanceRequest:
+      properties:
+        account_id:
+          type: string
+          title: Account Id
+        new_balance:
+          type: number
+          title: New Balance
+      type: object
+      required:
+      - account_id
+      - new_balance
+      title: UpdateBalanceRequest
+    ValidationError:
+      properties:
+        loc:
+          items:
+            anyOf:
+            - type: string
+            - type: integer
+          type: array
+          title: Location
+        msg:
+          type: string
+          title: Message
+        type:
+          type: string
+          title: Error Type
+      type: object
+      required:
+      - loc
+      - msg
+      - type
+      title: ValidationError

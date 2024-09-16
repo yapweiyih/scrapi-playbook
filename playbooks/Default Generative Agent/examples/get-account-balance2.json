@@ -1,0 +1,45 @@
+{
+  "name": "76ac36af-b9b4-4b57-a9da-01e6d9eb34e8",
+  "actions": [ {
+    "userUtterance": {
+      "text": "what is my account balance?"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Can I have your account id?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "422"
+    }
+  }, {
+    "toolUse": {
+      "tool": "projects/hello-world-418507/locations/us-central1/agents/bf9e57c5-4518-4255-913c-e9188905d87b/tools/f71ab101-e6ed-4ceb-bcae-247313345a10",
+      "action": "get_balance_get_balance__post",
+      "inputActionParameters": {
+        "requestBody": {
+          "account_id": "422"
+        }
+      },
+      "outputActionParameters": {
+        "200": {
+          "balance": 999
+        }
+      }
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Your balance is 999"
+    }
+  } ],
+  "playbookOutput": {
+    "executionSummary": "Showed account balance",
+    "actionParameters": {
+      "output_account_balance_string": 999
+    }
+  },
+  "displayName": "get-account-balance2",
+  "retrievalStrategy": "DEFAULT",
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

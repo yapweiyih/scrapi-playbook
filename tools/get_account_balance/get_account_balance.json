@@ -1,0 +1,28 @@
+{
+  "name": "f71ab101-e6ed-4ceb-bcae-247313345a10",
+  "displayName": "get_account_balance",
+  "description": "Get account balance",
+  "openApiSpec": {
+  
+  },
+  "sharedSchemas": [ {
+    "name": "AccountBalanceResponse",
+    "schema": "{\n  \"title\" : \"AccountBalanceResponse\",\n  \"required\" : [ \"balance\" ],\n  \"properties\" : {\n    \"balance\" : {\n      \"title\" : \"Balance\"\n    }\n  }\n}"
+  }, {
+    "name": "HealthCheckResponse",
+    "schema": "{\n  \"title\" : \"HealthCheckResponse\",\n  \"required\" : [ \"message\" ],\n  \"properties\" : {\n    \"message\" : {\n      \"title\" : \"Message\"\n    }\n  }\n}"
+  }, {
+    "name": "UpdateBalanceRequest",
+    "schema": "{\n  \"title\" : \"UpdateBalanceRequest\",\n  \"required\" : [ \"account_id\", \"new_balance\" ],\n  \"properties\" : {\n    \"account_id\" : {\n      \"title\" : \"Account Id\"\n    },\n    \"new_balance\" : {\n      \"title\" : \"New Balance\"\n    }\n  }\n}"
+  }, {
+    "name": "HTTPValidationError",
+    "schema": "{\n  \"title\" : \"HTTPValidationError\",\n  \"properties\" : {\n    \"detail\" : {\n      \"title\" : \"Detail\",\n      \"items\" : {\n        \"title\" : \"ValidationError\",\n        \"required\" : [ \"loc\", \"msg\", \"type\" ],\n        \"properties\" : {\n          \"loc\" : {\n            \"title\" : \"Location\",\n            \"items\" : {\n              \"anyOf\" : [ { }, { } ]\n            }\n          },\n          \"msg\" : {\n            \"title\" : \"Message\"\n          },\n          \"type\" : {\n            \"title\" : \"Error Type\"\n          }\n        }\n      }\n    }\n  }\n}"
+  }, {
+    "name": "ValidationError",
+    "schema": "{\n  \"title\" : \"ValidationError\",\n  \"required\" : [ \"loc\", \"msg\", \"type\" ],\n  \"properties\" : {\n    \"loc\" : {\n      \"title\" : \"Location\",\n      \"items\" : {\n        \"anyOf\" : [ { }, { } ]\n      }\n    },\n    \"msg\" : {\n      \"title\" : \"Message\"\n    },\n    \"type\" : {\n      \"title\" : \"Error Type\"\n    }\n  }\n}"
+  }, {
+    "name": "GetBalanceRequest",
+    "schema": "{\n  \"title\" : \"GetBalanceRequest\",\n  \"required\" : [ \"account_id\" ],\n  \"properties\" : {\n    \"account_id\" : {\n      \"title\" : \"Account Id\"\n    }\n  }\n}"
+  } ],
+  "toolType": "CUSTOMIZED_TOOL"
+}

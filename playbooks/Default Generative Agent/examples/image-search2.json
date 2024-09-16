@@ -1,0 +1,28 @@
+{
+  "name": "b9ccff03-f907-4ef8-a6c0-38bbe7c9720e",
+  "actions": [ {
+    "userUtterance": {
+      "text": "Tell me about the image?"
+    }
+  }, {
+    "toolUse": {
+      "tool": "projects/hello-world-418507/locations/us-central1/agents/bf9e57c5-4518-4255-913c-e9188905d87b/tools/e39b01f0-53f9-4c99-8102-6a0fd8f94534",
+      "action": "question_about_an_image",
+      "inputActionParameters": {
+        "image_path": "this/is/the/path/image.png",
+        "text": "Tell me about the image?"
+      },
+      "outputActionParameters": {
+        "200": "This is a dog"
+      }
+    }
+  }, {
+    "agentUtterance": {
+      "text": "I see a dog in the image"
+    }
+  } ],
+  "displayName": "image-search2",
+  "retrievalStrategy": "STATIC",
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}
