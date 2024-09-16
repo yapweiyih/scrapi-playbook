@@ -1,0 +1,86 @@
+{
+  "name": "3d521284-732a-49a2-ac42-36a6ef57bb77",
+  "displayName": "test1",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "injectedParameters": {
+        "name": "jimmy"
+      },
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "i want to speak to virtual agent"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "name": "jimmy"
+      },
+      "textResponses": [ {
+        "text": [ "Welcome jimmy" ]
+      }, {
+        "text": [ "Hi there! How can I help you today?" ]
+      } ]
+    },
+    "expectations": {
+      "expectedSessionParameters": [ {
+        "key": "name",
+        "value": "jimmy"
+      } ]
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "what is account balance"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "textResponses": [ {
+        "text": [ "Can I have your account id?" ]
+      } ]
+    },
+    "expectations": {
+      "expectedSessionParameters": [ {
+        "key": "name",
+        "value": "jimmy"
+      } ]
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "123"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "textResponses": [ {
+        "text": [ "Your balance is 1000.5" ]
+      }, {
+        "text": [ "Is there anything else I can help you with?" ]
+      } ]
+    },
+    "expectations": {
+      "expectedSessionParameters": [ {
+        "key": "name",
+        "value": "jimmy"
+      } ]
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1726501049,
+    "nanos": 56618000
+  },
+  "testConfig": {
+    "useCaseDescription": "test"
+  },
+  "languageCode": "en"
+}
