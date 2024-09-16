@@ -6,6 +6,8 @@
     "text": "If the user want to ask a question about an image, call ${TOOL:e39b01f0-53f9-4c99-8102-6a0fd8f94534}"
   }, {
     "text": "If the user want to get account balance, call ${TOOL:f71ab101-e6ed-4ceb-bcae-247313345a10}"
+  }, {
+    "text": "If the user want to speak to virtual agent, call ${FLOW:0e2abb76-eaa7-4bfc-8fcb-5d875aa10dca}"
   } ],
   "outputParameterDefinitions": [ {
     "name": "output_account_balance_string",
@@ -15,13 +17,24 @@
         "type": "STRING"
       }
     }
+  }, {
+    "name": "name",
+    "description": "Username",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    }
   } ],
+  "referencedFlows": [ "projects/hello-world-418507/locations/us-central1/agents/bf9e57c5-4518-4255-913c-e9188905d87b/flows/0e2abb76-eaa7-4bfc-8fcb-5d875aa10dca" ],
   "referencedTools": [ "projects/hello-world-418507/locations/us-central1/agents/bf9e57c5-4518-4255-913c-e9188905d87b/tools/e39b01f0-53f9-4c99-8102-6a0fd8f94534", "projects/hello-world-418507/locations/us-central1/agents/bf9e57c5-4518-4255-913c-e9188905d87b/tools/f71ab101-e6ed-4ceb-bcae-247313345a10" ],
   "instruction": {
     "steps": [ {
       "text": "If the user want to ask a question about an image, call ${TOOL:e39b01f0-53f9-4c99-8102-6a0fd8f94534}"
     }, {
       "text": "If the user want to get account balance, call ${TOOL:f71ab101-e6ed-4ceb-bcae-247313345a10}"
+    }, {
+      "text": "If the user want to speak to virtual agent, call ${FLOW:0e2abb76-eaa7-4bfc-8fcb-5d875aa10dca}"
     } ]
   }
 }

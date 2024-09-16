@@ -1,0 +1,32 @@
+{
+  "name": "ebafcd7d-8034-43fd-83d2-b0d41502351f",
+  "actions": [ {
+    "userUtterance": {
+      "text": "I want to speak to virtual agent"
+    }
+  }, {
+    "flowInvocation": {
+      "flow": "projects/hello-world-418507/locations/us-central1/agents/bf9e57c5-4518-4255-913c-e9188905d87b/flows/0e2abb76-eaa7-4bfc-8fcb-5d875aa10dca",
+      "inputActionParameters": {
+        "user": "David"
+      },
+      "outputActionParameters": {
+      
+      }
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Welcome David!"
+    }
+  } ],
+  "playbookOutput": {
+    "executionSummary": "Handover to virtual agent",
+    "actionParameters": {
+      "name": "David"
+    }
+  },
+  "displayName": "virtual-agent2",
+  "retrievalStrategy": "DEFAULT",
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}
