@@ -14,5 +14,13 @@
     "nextActionOverride": {
     
     }
-  }
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "name": "abf727fd-2d97-4279-a53e-7ea03981c78e",
+    "targetPlaybook": "Default Generative Agent"
+  } ]
 }
